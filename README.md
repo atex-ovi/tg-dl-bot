@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/atex-ovi/tg-dl-bot/main/.1775579507045.png" alt="tg-dl-bot" width="400"/>
+  <img src=".1775579507045.png" alt="tg-dl-bot" width="400"/>
 </p>
 
 Telegram bot for downloading videos/audio from YouTube, Facebook, Instagram, and TikTok.
