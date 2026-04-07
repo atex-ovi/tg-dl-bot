@@ -15,7 +15,7 @@ Telegram bot for downloading videos/audio from YouTube, Facebook, Instagram, and
 
 - Python >= 3.10
 - FFmpeg
-- Telegram Bot Token (from @BotFather)
+- Telegram Bot Token from [@BotFather](https://t.me/BotFather)
 
 ## Installation
 
