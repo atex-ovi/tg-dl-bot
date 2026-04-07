@@ -86,4 +86,4 @@ tg-dl-bot/
 
 ## License
 
-[MIT](LICENSE)
+[MIT](LICENSE.md)
