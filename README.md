@@ -8,9 +8,6 @@ Telegram bot for downloading videos/audio from YouTube, Facebook, Instagram, and
 - Facebook (Audio, Video Best)
 - Instagram (Audio, Video Best)
 - TikTok (Audio, Video Best)
-- Background processing (no timeout)
-- Auto retry on upload failure
-- Back to menu button
 
 ## Requirements
 
