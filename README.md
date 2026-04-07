@@ -21,20 +21,35 @@ Telegram bot for downloading videos/audio from YouTube, Facebook, Instagram, and
 ## Installation
 
 1. Clone repository
-   git clone https://github.com/atex-ovi/tg-dl-bot.git
-   cd tg-dl-bot
+
+```bash
+git clone https://github.com/atex-ovi/tg-dl-bot.git
+cd tg-dl-bot
+```
 
 2. Install dependencies
-   pip install -r requirements.txt
+
+```bash
+pip install -r requirements.txt
+```
 
 3. Install FFmpeg (Termux)
-   pkg install ffmpeg
+
+```bash
+pkg install ffmpeg
+```
 
 4. Set bot token
-   export BOT_TOKEN="your_telegram_bot_token"
+
+```bash
+export BOT_TOKEN="your_telegram_bot_token"
+```
 
 5. Run bot
-   python bot.py
+
+```bash
+python bot.py
+```
 
 ## Environment Variables
 
@@ -54,11 +69,13 @@ Telegram bot for downloading videos/audio from YouTube, Facebook, Instagram, and
 
 ## File Structure
 
+```text
 tg-dl-bot/
-├── bot.py              # Main bot code
-├── requirements.txt    # Python dependencies
-├── .gitignore         # Git ignore file
-└── README.md          # This file
+├── bot.py
+├── requirements.txt
+├── .gitignore
+└── README.md
+```
 
 ## Notes
 
@@ -69,10 +86,4 @@ tg-dl-bot/
 
 ## License
 
-MIT License
-
-## Author
-
-Atex Ovi
-
-GitHub: https://github.com/atex-ovi
+[MIT](LICENSE)
