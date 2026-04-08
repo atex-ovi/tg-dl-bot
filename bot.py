@@ -7,7 +7,15 @@ from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, CallbackQueryHandler, filters, ContextTypes
 from telegram.error import TimedOut
 
-TOKEN = os.getenv("BOT_TOKEN", "YOUR_BOT_TOKEN")
+TOKEN = os.getenv("BOT_TOKEN")
+# TOKEN = "your_telegram_bot_token_here"  # Uncomment for local testing
+
+if not TOKEN:
+    print("❌ BOT_TOKEN not set!")
+    print("   Local: uncomment hardcode line above")
+    print("   Production: export BOT_TOKEN='your_token'")
+    exit(1)
+
 DOWNLOAD_DIR = ".downloads"
 os.makedirs(DOWNLOAD_DIR, exist_ok=True)
 
@@ -405,10 +413,6 @@ async def quality_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     ))
 
 def main():
-    if TOKEN == "YOUR_BOT_TOKEN":
-        print("❌ Please set BOT_TOKEN environment variable!")
-        return
-    
     app = Application.builder().token(TOKEN).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CallbackQueryHandler(platform_handler, pattern="^platform_"))
@@ -422,3 +426,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
