@@ -6,10 +6,10 @@ Telegram bot for downloading videos/audio from YouTube, Facebook, Instagram, and
 
 ## Features
 
-- YouTube (Audio, Video Best, Select Quality)
-- Facebook (Audio, Video Best)
-- Instagram (Audio, Video Best)
-- TikTok (Audio, Video Best)
+- **YouTube** (Audio, Video Best, Select Quality)
+- **Facebook** (Audio, Video Best)
+- **Instagram** (Audio, Video Best)
+- **TikTok** (Audio, Video Best)
 
 ## Requirements
 
@@ -77,7 +77,8 @@ Find this line in bot.py:
 Change to:
 `TOKEN = "your_telegram_bot_token_here"`
 
-> Warning: Never commit hardcoded token to GitHub. Use environment variable for production.
+> [!IMPORTANT]
+> **Never commit hardcoded token to GitHub. Use environment variable for production.**
 
 ## Usage
 
@@ -99,12 +100,11 @@ tg-dl-bot/
 └── README.md
 ```
 
-## Notes
-
-- Maximum file size: 50MB (Telegram limit)
-- Large files may take a few minutes to upload
-- Uses yt-dlp for video downloading
-- Requires Deno for YouTube extraction (install with: pkg install deno)
+> [!NOTE]
+> - Maximum file size: 50MB (Telegram limit)
+> - Large files may take a few minutes to upload
+> - Uses yt-dlp for video downloading
+> - Requires Deno for YouTube extraction (install with: pkg install deno)
 
 ## License
 
