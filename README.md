@@ -56,6 +56,29 @@ python bot.py
 |----------|-------------|
 | BOT_TOKEN | Telegram bot token from @BotFather |
 
+## Token Configuration
+
+The bot supports two modes for setting the bot token:
+
+### Production Mode (Environment Variable)
+
+Set environment variable before running:
+
+export BOT_TOKEN="your_telegram_bot_token"
+python bot.py
+
+### Local Testing Mode (Hardcode)
+
+Edit `bot.py` and uncomment the hardcode line:
+
+Find this line in bot.py:
+`# TOKEN = "your_telegram_bot_token_here"  # Uncomment for local testing`
+
+Change to:
+`TOKEN = "your_telegram_bot_token_here"`
+
+> Warning: Never commit hardcoded token to GitHub. Use environment variable for production.
+
 ## Usage
 
 1. Start bot with /start
