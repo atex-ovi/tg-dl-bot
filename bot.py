@@ -173,7 +173,7 @@ async def process_download_and_send(bot, chat_id, message_id, url, format_type, 
         await bot.edit_message_text(
             chat_id=chat_id,
             message_id=status_msg.message_id,
-            text="📤 *Uploading to Telegram...*",
+            text="📤 *Bot is preparing your file...*",
             parse_mode='Markdown'
         )
         
@@ -192,25 +192,26 @@ async def process_download_and_send(bot, chat_id, message_id, url, format_type, 
                     file_type='video'
                 )
         
+        # KIRIM NOTIFIKASI DI BAWAH (PESAN TERPISAH)
         format_name = "MP3" if (filename.endswith('.mp3') or format_type == 'audio') else "MP4"
         keyboard = [[InlineKeyboardButton("🔙 Back to Menu", callback_data="back_to_menu")]]
         
-        await bot.edit_message_text(
+        await bot.send_message(
             chat_id=chat_id,
-            message_id=status_msg.message_id,
             text=f"✅ *Download complete!*\n\n📹 *{title[:50]}*\n📦 Size: {file_size:.2f} MB\n🎵 Format: {format_name}\n📱 Platform: {platform}",
             reply_markup=InlineKeyboardMarkup(keyboard),
             parse_mode='Markdown'
         )
         
+        try:
+            await bot.delete_message(chat_id=chat_id, message_id=status_msg.message_id)
+        except:
+            pass
+        
+        # HAPUS FILE
         await asyncio.sleep(5)
         if os.path.exists(filename):
             os.remove(filename)
-        
-        try:
-            await bot.delete_message(chat_id=chat_id, message_id=message_id)
-        except:
-            pass
         
     except Exception as e:
         print(f"Process error: {e}")
@@ -304,7 +305,7 @@ async def handle_url(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
         return
     
-    msg = await update.message.reply_text("🔍 *Detecting...*", parse_mode='Markdown')
+    msg = await update.message.reply_text("🔍 *Analyzing...*", parse_mode='Markdown')
     
     try:
         ydl_opts = {'quiet': True, 'no_warnings': True}
@@ -426,4 +427,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
     
