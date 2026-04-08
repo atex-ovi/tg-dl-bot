@@ -2,7 +2,7 @@
   <img src="logo.png" alt="tg-dl-bot" width="400"/>
 </p>
 
-Telegram bot for downloading videos/audio from YouTube, Facebook, Instagram, and TikTok.
+**Telegram bot for downloading videos/audio from YouTube, Facebook, Instagram, and TikTok.**
 
 📺 **Video Tutorial:** [click here](https://www.facebook.com/share/v/1BJBdz7hgX/)
 
