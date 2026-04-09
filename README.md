@@ -6,14 +6,16 @@
 
 📺 **Video Tutorial:** [click here](https://www.facebook.com/share/v/1BJBdz7hgX/)
 
-## Features
-...
+---
+
 ## Features
 
-- **YouTube** (Audio, Video Best, Select Quality)
-- **Facebook** (Audio, Video Best)
-- **Instagram** (Audio, Video Best)
-- **TikTok** (Audio, Video Best)
+- **YouTube** - Audio, Video Best, Select Quality (360p-1080p)
+- **Facebook** - Audio, Video Best
+- **Instagram** - Audio, Video Best
+- **TikTok** - Audio, Video Best
+
+---
 
 ## Requirements
 
@@ -21,68 +23,71 @@
 - FFmpeg
 - Telegram Bot Token from [@BotFather](https://t.me/BotFather)
 
+---
+
+## Getting Telegram Bot Token
+
+1. Open Telegram and search for [@BotFather](https://t.me/BotFather)
+2. Send `/newbot` command
+3. Choose a name for your bot (example: `My Downloader Bot`)
+4. Choose a username (must end with `bot`, example: `mydownloader_bot`)
+5. Copy the token you receive. It looks like:
+```
+
+1234567890:ABCdefGHIjklmNOPqrStuVWXyz
+
+```
+
+> [!TIP]
+> Keep your token secret! Anyone with this token can control your bot.
+
+---
+
 ## Installation
 
-1. Clone repository
+### 1. Clone repository
 
 ```bash
 git clone https://github.com/atex-ovi/tg-dl-bot.git
 cd tg-dl-bot
 ```
 
-2. Install dependencies
+### 2. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Install FFmpeg
+### 3. Install FFmpeg (Termux)
 
 ```bash
 pkg install ffmpeg
 ```
 
-4. Set bot token
+### 4. Setup bot token (choose one)
+
+Option A: Local Testing (Hardcode) - Edit bot.py:
+
+```python
+TOKEN = "your_telegram_bot_token_here"  # Uncomment this line
+```
+
+Option B: Production (Environment Variable):
 
 ```bash
 export BOT_TOKEN="your_telegram_bot_token"
 ```
 
-5. Run bot
+### 5. Run bot
 
 ```bash
 python bot.py
 ```
-
-## Environment Variables
-
-| Variable | Description |
-|----------|-------------|
-| BOT_TOKEN | Telegram bot token from @BotFather |
-
-## Token Configuration
-
-The bot supports two modes for setting the bot token:
-
-### Production Mode (Environment Variable)
-
-Set environment variable before running:
-
-export BOT_TOKEN="your_telegram_bot_token"
-python bot.py
-
-### Local Testing Mode (Hardcode)
-
-Edit `bot.py` and uncomment the hardcode line:
-
-Find this line in bot.py:
-`# TOKEN = "your_telegram_bot_token_here"  # Uncomment for local testing`
-
-Change to:
-`TOKEN = "your_telegram_bot_token_here"`
 
 > [!IMPORTANT]
-> **Never commit hardcoded token to GitHub. Use environment variable for production.**
+> **Never commit hardcoded token to GitHub! Use environment variable for production.**
+
+---
 
 ## Usage
 
