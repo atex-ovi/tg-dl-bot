@@ -58,7 +58,7 @@ cd tg-dl-bot
 pip install -r requirements.txt
 ```
 
-### 3. Install FFmpeg (Termux)
+### 3. Install FFmpeg
 
 ```bash
 pkg install ffmpeg
